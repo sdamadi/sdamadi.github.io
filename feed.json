@@ -12,17 +12,17 @@
         {
             "id": "https://sdamadi.github.io/first-post.html",
             "url": "https://sdamadi.github.io/first-post.html",
-            "title": "First post",
-            "summary": "Hello, This is a post test. This is an inline math $a = 2$. $$ (a + b) ^ 2 = a ^ 2 + 2 a b + b ^ 2$$ $$\\mathbb{R}$$",
-            "content_html": "<p>Hello,</p>\n<p>This is a post test. This is an inline math $a = 2$.</p>\n<p> </p>\n<p>$$ (a + b) ^ 2 = a ^ 2 + 2 a b + b ^ 2$$</p>\n<p>$$\\mathbb{R}$$</p>",
-            "image": "https://sdamadi.github.io/media/posts/1/antoine-dautry-428776-unsplash.jpg",
+            "title": "Geometric intuition behind Principle Component Analysis (PCA) in stochastic setting",
+            "summary": "To understand Principle Component Analysis (PCA) in stochastic setting assume $x \\in \\mathbb{R}^n$ be a random vector. Also, assume $x$ is distributed according to a distribution $D$ which is unknown. Knowing the fact that $x$ lives in $\\mathbb{R}^n$, immediately brings a question whether $x$ is bounded or&hellip;",
+            "content_html": "<p><span style=\"font-size: 12.5pt; font-family: 'Arial',sans-serif; color: #2a2e30;\">To understand Principle Component Analysis (PCA) in stochastic setting assume $x \\in \\mathbb{R}^n$ be a random vector. Also, assume $x$ is distributed according to a distribution $D$ which is unknown.</span></p>\n<p style=\"box-sizing: border-box; margin: 1.6rem 0px 0px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px;\"><span style=\"font-size: 12.5pt; font-family: 'Arial',sans-serif; color: #2a2e30;\">Knowing the fact that $x$ lives in $\\mathbb{R}^n$, immediately brings a question whether $x$ is bounded or not. When $x$ is not bounded we can say nothing about how big it is but when $x$ is bounded we know it can be contained in a ball with radius $R$ where $\\mathbb{E}[\\|x\\|_2^2] \\leq R$.</span></p>\n<p style=\"box-sizing: border-box; margin: 1.6rem 0px 0px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px;\"><span style=\"font-size: 12.5pt; font-family: 'Arial',sans-serif; color: #2a2e30;\"><strong>Note</strong>: Talking about boundedness requires a measure which is $\\ell_2$-norm in this case (but it could be any norm). In addition, the reason behind the expected value is that we are dealing with a random vector that takes on any value in $\\mathbb{R}^n$, but cannot talk about the exact maximum of $x$. Hence, we are interested in the maximum it can achieve on the average, that is why we have expectation.</span></p>",
+            "image": "https://sdamadi.github.io/media/posts/1/javier-graterol-31710-unsplash.jpg",
             "author": {
                 "name": "Saeed"
             },
             "tags": [
             ],
             "date_published": "2018-12-30T23:06:46-05:00",
-            "date_modified": "2018-12-30T23:16:39-05:00"
+            "date_modified": "2018-12-31T16:04:58-05:00"
         }
     ]
 }
