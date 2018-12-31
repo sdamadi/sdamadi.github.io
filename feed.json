@@ -13,16 +13,16 @@
             "id": "https://sdamadi.github.io/first-post.html",
             "url": "https://sdamadi.github.io/first-post.html",
             "title": "First post",
-            "summary": "Hello, This is a post test. $$ (a + b) ^ 2 = a ^ 2 + 2 a b + b ^ 2$$",
-            "content_html": "<p>Hello,</p>\n<p>This is a post test.</p>\n<p> </p>\n<p>$$ (a + b) ^ 2 = a ^ 2 + 2 a b + b ^ 2$$</p>",
-            "image": "https://sdamadi.github.io/media/posts/1/",
+            "summary": "Hello, This is a post test. This is an inline math $a = 2$. $$ (a + b) ^ 2 = a ^ 2 + 2 a b + b ^ 2$$ $$\\mathbb{R}$$",
+            "content_html": "<p>Hello,</p>\n<p>This is a post test. This is an inline math $a = 2$.</p>\n<p> </p>\n<p>$$ (a + b) ^ 2 = a ^ 2 + 2 a b + b ^ 2$$</p>\n<p>$$\\mathbb{R}$$</p>",
+            "image": "https://sdamadi.github.io/media/posts/1/antoine-dautry-428776-unsplash.jpg",
             "author": {
                 "name": "Saeed"
             },
             "tags": [
             ],
             "date_published": "2018-12-30T23:06:46-05:00",
-            "date_modified": "2018-12-30T23:11:59-05:00"
+            "date_modified": "2018-12-30T23:16:39-05:00"
         }
     ]
 }
