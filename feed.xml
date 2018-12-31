@@ -3,7 +3,7 @@
     <title>Saeed Damadi</title>
     <link href="https://sdamadi.github.io/feed.xml" rel="self" />
     <link href="https://sdamadi.github.io" />
-    <updated>2018-12-31T16:06:21-05:00</updated>
+    <updated>2018-12-31T16:10:25-05:00</updated>
     <author>
         <name>Saeed</name>
     </author>
@@ -17,17 +17,19 @@
         <link href="https://sdamadi.github.io/first-post.html"/>
         <id>https://sdamadi.github.io/first-post.html</id>
 
-        <updated>2018-12-31T16:04:58-05:00</updated>
+        <updated>2018-12-31T16:10:11-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://sdamadi.github.io/media/posts/1/javier-graterol-31710-unsplash.jpg" alt="" />
-                    To understand Principle Component Analysis (PCA) in stochastic setting assume $x \in \mathbb{R}^n$ be a random vector. Also, assume $x$ is distributed according to a distribution $D$ which is unknown. Knowing the fact that $x$ lives in $\mathbb{R}^n$, immediately brings a question whether $x$ is bounded or&hellip;
+                    Principle Component Analysis (PCA) in stochastic setting Why PCA is important is because It is used for obtaining a lower dimensional representation of a high dimensional data that still captures as much as possible of the original signal. Likewise the picture, the reflection on the water is 2D&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
                     <img src="https://sdamadi.github.io/media/posts/1/javier-graterol-31710-unsplash.jpg" alt="" />
-                <p><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; color: #2a2e30;">To understand Principle Component Analysis (PCA) in stochastic setting assume $x \in \mathbb{R}^n$ be a random vector. Also, assume $x$ is distributed according to a distribution $D$ which is unknown.</span></p>
+                <p><strong>Principle Component Analysis (PCA) in stochastic setting</strong></p>
+<p>Why PCA is important is because It is used for obtaining a lower dimensional representation of a high dimensional data that still captures as much as possible of the original signal. Likewise the picture, the reflection on the water is 2D representation of 3D city which need less space!</p>
+<p><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; color: #2a2e30;">To understand Principle Component Analysis (PCA) in stochastic setting assume $x \in \mathbb{R}^n$ be a random vector. Also, assume $x$ is distributed according to a distribution $D$ which is unknown.</span></p>
 <p style="box-sizing: border-box; margin: 1.6rem 0px 0px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px;"><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; color: #2a2e30;">Knowing the fact that $x$ lives in $\mathbb{R}^n$, immediately brings a question whether $x$ is bounded or not. When $x$ is not bounded we can say nothing about how big it is but when $x$ is bounded we know it can be contained in a ball with radius $R$ where $\mathbb{E}[\|x\|_2^2] \leq R$.</span></p>
 <p style="box-sizing: border-box; margin: 1.6rem 0px 0px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px;"><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; color: #2a2e30;"><strong>Note</strong>: Talking about boundedness requires a measure which is $\ell_2$-norm in this case (but it could be any norm). In addition, the reason behind the expected value is that we are dealing with a random vector that takes on any value in $\mathbb{R}^n$, but cannot talk about the exact maximum of $x$. Hence, we are interested in the maximum it can achieve on the average, that is why we have expectation.</span></p>
             ]]>
