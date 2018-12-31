@@ -1,0 +1,28 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Saeed Damadi",
+    "description": "",
+    "home_page_url": "https://sdamadi.github.io",
+    "feed_url": "https://sdamadi.github.io/feed.json",
+    "user_comment": "",
+    "author": {
+        "name": "Saeed"
+    },
+    "items": [
+        {
+            "id": "https://sdamadi.github.io/first-post.html",
+            "url": "https://sdamadi.github.io/first-post.html",
+            "title": "First post",
+            "summary": "Hello, This is a post test.",
+            "content_html": "<p>Hello,</p>\n<p>This is a post test.</p>",
+            "image": "https://sdamadi.github.io/media/posts/1/",
+            "author": {
+                "name": "Saeed"
+            },
+            "tags": [
+            ],
+            "date_published": "2018-12-30T23:06:46-05:00",
+            "date_modified": "2018-12-30T23:06:46-05:00"
+        }
+    ]
+}
