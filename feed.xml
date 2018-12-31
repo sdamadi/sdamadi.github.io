@@ -3,7 +3,7 @@
     <title>Saeed Damadi</title>
     <link href="https://sdamadi.github.io/feed.xml" rel="self" />
     <link href="https://sdamadi.github.io" />
-    <updated>2018-12-30T23:08:23-05:00</updated>
+    <updated>2018-12-30T23:12:08-05:00</updated>
     <author>
         <name>Saeed</name>
     </author>
@@ -17,11 +17,11 @@
         <link href="https://sdamadi.github.io/first-post.html"/>
         <id>https://sdamadi.github.io/first-post.html</id>
 
-        <updated>2018-12-30T23:08:18-05:00</updated>
+        <updated>2018-12-30T23:11:59-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://sdamadi.github.io/media/posts/1/" alt="" />
-                    Hello, This is a post test.
+                    Hello, This is a post test. $$ (a + b) ^ 2 = a ^ 2 + 2 a b + b ^ 2$$
                 ]]>
             </summary>
         <content type="html">
@@ -29,6 +29,8 @@
                     <img src="https://sdamadi.github.io/media/posts/1/" alt="" />
                 <p>Hello,</p>
 <p>This is a post test.</p>
+<p> </p>
+<p>$$ (a + b) ^ 2 = a ^ 2 + 2 a b + b ^ 2$$</p>
             ]]>
         </content>
     </entry>

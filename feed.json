@@ -13,8 +13,8 @@
             "id": "https://sdamadi.github.io/first-post.html",
             "url": "https://sdamadi.github.io/first-post.html",
             "title": "First post",
-            "summary": "Hello, This is a post test.",
-            "content_html": "<p>Hello,</p>\n<p>This is a post test.</p>",
+            "summary": "Hello, This is a post test. $$ (a + b) ^ 2 = a ^ 2 + 2 a b + b ^ 2$$",
+            "content_html": "<p>Hello,</p>\n<p>This is a post test.</p>\n<p> </p>\n<p>$$ (a + b) ^ 2 = a ^ 2 + 2 a b + b ^ 2$$</p>",
             "image": "https://sdamadi.github.io/media/posts/1/",
             "author": {
                 "name": "Saeed"
@@ -22,7 +22,7 @@
             "tags": [
             ],
             "date_published": "2018-12-30T23:06:46-05:00",
-            "date_modified": "2018-12-30T23:08:18-05:00"
+            "date_modified": "2018-12-30T23:11:59-05:00"
         }
     ]
 }
