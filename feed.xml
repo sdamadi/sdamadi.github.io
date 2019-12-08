@@ -3,35 +3,74 @@
     <title>Saeed Damadi</title>
     <link href="https://sdamadi.github.io/feed.xml" rel="self" />
     <link href="https://sdamadi.github.io" />
-    <updated>2018-12-31T16:11:12-05:00</updated>
+    <updated>2019-12-07T22:04:44-05:00</updated>
     <author>
         <name>Saeed</name>
     </author>
     <id>https://sdamadi.github.io</id>
 
     <entry>
-        <title>Geometric intuition behind Principle Component Analysis (PCA) in stochastic setting</title>
+        <title>Operation complexity of familiar matrix multiplications</title>
+        <author>
+            <name>Saeed</name>
+        </author>
+        <link href="https://sdamadi.github.io/operation-complexity-of-familiar-matrix-multiplication.html"/>
+        <id>https://sdamadi.github.io/operation-complexity-of-familiar-matrix-multiplication.html</id>
+
+        <updated>2019-12-07T21:53:55-05:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://sdamadi.github.io/media/posts/2/" alt="" />
+                    Let $x \in \mathbb{R}^n$. 1- Why operations required for computing $\frac{1}{T}\sum_{t=1}^{T}x_tx_t^T$ is $O(d^2)$? 2- What is the upperbound for operation $xx^TU$ where $U \in \mathbb{R}^{n \times k}$
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <img src="https://sdamadi.github.io/media/posts/2/" alt="" />
+                <p>Let $x \in \mathbb{R}^n$.</p>
+<p>1- Why operations required for computing $\frac{1}{T}\sum_{t=1}^{T}x_tx_t^T$ is $O(d^2)$?</p>
+<p>2- What is the upperbound for operation $xx^TU$ where $U \in \mathbb{R}^{n \times k}$</p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Stochastic intuition behind Principle Component Analysis (PCA) in stochastic setting</title>
         <author>
             <name>Saeed</name>
         </author>
         <link href="https://sdamadi.github.io/first-post.html"/>
         <id>https://sdamadi.github.io/first-post.html</id>
 
-        <updated>2018-12-31T16:10:11-05:00</updated>
+        <updated>2019-01-01T01:36:27-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://sdamadi.github.io/media/posts/1/javier-graterol-31710-unsplash.jpg" alt="" />
-                    Principle Component Analysis (PCA) in stochastic setting Why PCA is important is because It is used for obtaining a lower dimensional representation of a high dimensional data that still captures as much as possible of the original signal. Likewise the picture, the reflection on the water is 2D&hellip;
+                    Principle Component Analysis (PCA) in stochastic setting Why PCA is important is because It is used for obtaining a lower dimensional representation of a high dimensional data that still captures as much as possible of the original signal. Likewise, the picture, the reflection on the water is 2D&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
                     <img src="https://sdamadi.github.io/media/posts/1/javier-graterol-31710-unsplash.jpg" alt="" />
-                <p><strong>Principle Component Analysis (PCA) in stochastic setting</strong></p>
-<p>Why PCA is important is because It is used for obtaining a lower dimensional representation of a high dimensional data that still captures as much as possible of the original signal. Likewise the picture, the reflection on the water is 2D representation of 3D city which need less space!</p>
-<p><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; color: #2a2e30;">To understand Principle Component Analysis (PCA) in stochastic setting assume $x \in \mathbb{R}^n$ be a random vector. Also, assume $x$ is distributed according to a distribution $D$ which is unknown.</span></p>
+                <p style="margin: 0in; margin-bottom: .0001pt;"><strong><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; color: #2a2e30;">Principle Component Analysis (PCA) in stochastic setting</span></strong></p>
+<p style="box-sizing: border-box; margin: 1.6rem 0px 0px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px;"><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; color: #2a2e30;">Why PCA is important is because It is used for obtaining a lower dimensional representation of a high dimensional data that still captures as much as possible of the original signal. Likewise, the picture, the reflection on the water is 2D representation of 3D city which need less space!</span></p>
+<p style="box-sizing: border-box; margin: 1.6rem 0px 0px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px;"><span style="box-sizing: border-box;"><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; color: #2a2e30;">To understand Principle Component Analysis (PCA) in stochastic setting assume $x \in \mathbb{R}^n$ be a random vector. Also, assume $x$ is distributed according to a distribution $D$ which is unknown.</span></span></p>
 <p style="box-sizing: border-box; margin: 1.6rem 0px 0px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px;"><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; color: #2a2e30;">Knowing the fact that $x$ lives in $\mathbb{R}^n$, immediately brings a question whether $x$ is bounded or not. When $x$ is not bounded we can say nothing about how big it is but when $x$ is bounded we know it can be contained in a ball with radius $R$ where $\mathbb{E}[\|x\|_2^2] \leq R$.</span></p>
-<p style="box-sizing: border-box; margin: 1.6rem 0px 0px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px;"><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; color: #2a2e30;"><strong>Note</strong>: Talking about boundedness requires a measure which is $\ell_2$-norm in this case (but it could be any norm). In addition, the reason behind the expected value is that we are dealing with a random vector that takes on any value in $\mathbb{R}^n$, but cannot talk about the exact maximum of $x$. Hence, we are interested in the maximum it can achieve on the average, that is why we have expectation.</span></p>
+<p style="box-sizing: border-box; margin: 1.6rem 0px 0px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px;"><span style="font-size: 12.5pt; font-family: 'Arial',sans-serif; color: #2a2e30;"><strong style="box-sizing: border-box;">Note</strong>: Talking about boundedness requires a measure which is $\ell_2$-norm in this case (but it could be any norm). In addition, the reason behind the expected value is that we are dealing with a random vector that takes on any value in $\mathbb{R}^n$, but cannot talk about the exact maximum of $x$. Hence, we are interested in the maximum it can achieve on the average, that is why we have expectation.</span></p>
+<p style="box-sizing: border-box; margin: 1.6rem 0px 0px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px;">Now the radius of that ball is important because it gives us the expected boundary of the space that $x$ lives in it:</p>
+<p style="box-sizing: border-box; margin: 1.6rem 0px 0px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px;">$$\max \,\,\,\, \mathbb{E}[\|x\|_2^2]$$</p>
+<p style="box-sizing: border-box; margin: 1.6rem 0px 0px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px;">$$\text{s.t.} \,\,\,\, x \sim D$$</p>
+<p style="box-sizing: border-box; margin: 1.6rem 0px 0px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px;">Since the quantity inside the expectation is a scalar, we know that the trace of a scalar is the same as itself so</p>
+<p style="box-sizing: border-box; margin: 1.6rem 0px 0px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px;">$$\max \,\,\,\, \mathbb{E}[tr(x^Tx)]$$</p>
+<p style="box-sizing: border-box; margin: 1.6rem 0px 0px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px;">$$\text{s.t.} \,\,\,\, x \sim D$$</p>
+<p style="box-sizing: border-box; margin: 1.6rem 0px 0px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px;">where $\|x\|_2^2=x^Tx$.</p>
+<p style="box-sizing: border-box; margin: 1.6rem 0px 0px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px;">Writing the objective as $\mathbb{E}[tr(x^Tx)]]=\mathbb{E}[tr(x^TxI_d)]]$ where $I_d \in \mathbb{R}^{d \times d}$ is the identity matrix, and using <a href="https://en.wikipedia.org/wiki/Trace_(linear_algebra)">cyclic permutation</a> of trace operator we have</p>
+<p style="box-sizing: border-box; margin: 1.6rem 0px 0px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px;">$$\max\,\,\,\, \mathbb{E}[tr(xIx^T)] \tag{1}$$</p>
+<p style="box-sizing: border-box; margin: 1.6rem 0px 0px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px;">$$\text{s.t.} \,\,\,\, x \sim D$$</p>
+<p style="box-sizing: border-box; margin: 1.6rem 0px 0px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px;">We know that $I_d$ can be written as $I_d=UU^T$ where $U \in \mathbb{R}^{d \times d}$ is a matrix whose columns are $d$ permutations of Euclidean basis set $\{e_1,e_2, \cdots, e_d\}$. For example $U$ might be as follows $$U=\begin{bmatrix}e_d &amp; e_{d-1} &amp; \cdots &amp; e_1\end{bmatrix}$$ </p>
+<p style="box-sizing: border-box; margin: 1.6rem 0px 0px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px;">where $e_i \in \mathbb{R}^{d}$ has $1$ for $i$-th componenet and the rest are zero. So</p>
+<p style="box-sizing: border-box; margin: 1.6rem 0px 0px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px;">$$I_d=UU^T=\begin{bmatrix}e_d &amp; e_{d-1} &amp; \cdots &amp; e_1\end{bmatrix}\begin{bmatrix}e_k^T \\ e_{d-1}^T \\ \cdots \\ e_1^T\end{bmatrix}=e_de_d^T+e_{d-1}e_{d-1}^T+ \cdots + e_1e_1^T$$</p>
+<p style="box-sizing: border-box; margin: 1.6rem 0px 0px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px;">where each $E_i=e_ie_i^T$ is a $d \times d$ matrix whose $E_{ii}$ comonent is $1$ and the rest is zero. Any permutation of the set $\{e_1,e_2, \cdots, e_d\}$ adds up to $I_d$. Totally, we have $d!$ permutations of Euclidean basis set to build $I_d$.</p>
+<p style="box-sizing: border-box; margin: 1.6rem 0px 0px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px;">We know that $I_d$ is a projection matrix from $\mathbb{R}^{d}$ to $\mathbb{R}^{d}$. However, we are looking for the projection onto a subspace with lower dimentional $k$. Projection from $\mathbb{R}^{d}$ to $\mathbb{R}^{k}$ is done using $P_k=U_k^TU_k$ where $U_k \in \mathbb{R}^{d \times k}$ is a matrix whose columns are $k$ permutations of Euclidean basis set $\{e_1,e_2, \cdots, e_d\}$. Therefore, $P_k$ has $k$ ones on the diagonal and the rest is zero. Let $I_k^{\perp}=I_d-I_k$. Then (1) becomes</p>
             ]]>
         </content>
     </entry>
