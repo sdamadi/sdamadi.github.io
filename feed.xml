@@ -3,12 +3,34 @@
     <title>Saeed Damadi</title>
     <link href="https://sdamadi.github.io/feed.xml" rel="self" />
     <link href="https://sdamadi.github.io" />
-    <updated>2019-12-07T22:13:00-05:00</updated>
+    <updated>2019-12-23T18:00:46-05:00</updated>
     <author>
         <name>Saeed</name>
     </author>
     <id>https://sdamadi.github.io</id>
 
+    <entry>
+        <title>Jacobian of a composition function: an example</title>
+        <author>
+            <name>Saeed</name>
+        </author>
+        <link href="https://sdamadi.github.io/jacobian-of-a-composition-function.html"/>
+        <id>https://sdamadi.github.io/jacobian-of-a-composition-function.html</id>
+
+        <updated>2019-12-23T18:00:05-05:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://sdamadi.github.io/media/posts/3/" alt="" />
+                    In this post we are going to
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <img src="https://sdamadi.github.io/media/posts/3/" alt="" />
+                In this post we are going to
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Operation complexity of familiar matrix multiplications</title>
         <author>
@@ -41,7 +63,7 @@
         <link href="https://sdamadi.github.io/first-post.html"/>
         <id>https://sdamadi.github.io/first-post.html</id>
 
-        <updated>2019-12-07T22:12:19-05:00</updated>
+        <updated>2019-12-07T22:14:01-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://sdamadi.github.io/media/posts/1/javier-graterol-31710-unsplash.jpg" alt="" />
