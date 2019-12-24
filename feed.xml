@@ -3,7 +3,7 @@
     <title>Saeed Damadi</title>
     <link href="https://sdamadi.github.io/feed.xml" rel="self" />
     <link href="https://sdamadi.github.io" />
-    <updated>2019-12-23T23:09:33-05:00</updated>
+    <updated>2019-12-23T23:13:02-05:00</updated>
     <author>
         <name>Saeed</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://sdamadi.github.io/what-is-jacobian-and-why-do-we-need-it.html"/>
         <id>https://sdamadi.github.io/what-is-jacobian-and-why-do-we-need-it.html</id>
 
-        <updated>2019-12-23T23:08:46-05:00</updated>
+        <updated>2019-12-23T23:12:47-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://sdamadi.github.io/media/posts/4/" alt="" />
@@ -44,7 +44,7 @@
 <p>By looking at $i$-th row of the Jacobian matrix, we see that it is transpose of the gradient of $f_i$, i.e., $(\nabla f_i)^{\top}$ which I denoted by $\nabla^{\top} f_i$ . </p>
 <p><strong>Remark 1</strong>: If $f$ becomes a scalar-valued function and $x$ becomes a number in real line instead of a vector, the Jacobian matrix becomes the derivative!</p>
 <p><strong>Remark 2</strong>: Jacobian matrix is the matrix of all first-order partial derivatives of the function.</p>
-<h3 id="need">Why do we need Jacobian matrix?</h3>
+<h3 id="mcetoc_1dsr1mght0">Why do we need Jacobian matrix?</h3>
 <p>Jacobian of a composition function is the product of the Jacobian matrices of each functions. Suppose we have the following fucntion:</p>
 <p>$$<br>f (x)= f_1(f_2(\cdots( f_n(x) ) ) = f_1 \circ f_2 \circ \cdots\circ f_n(x)<br>$$</p>
 <p>The Jacobian matrix of $f$ with respect to $x$ is:</p>
