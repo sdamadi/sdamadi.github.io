@@ -3,12 +3,48 @@
     <title>Saeed Damadi</title>
     <link href="https://sdamadi.github.io/feed.xml" rel="self" />
     <link href="https://sdamadi.github.io" />
-    <updated>2019-12-23T18:11:18-05:00</updated>
+    <updated>2019-12-23T20:41:53-05:00</updated>
     <author>
         <name>Saeed</name>
     </author>
     <id>https://sdamadi.github.io</id>
 
+    <entry>
+        <title>What is Jacobian matrix and why do we need it?</title>
+        <author>
+            <name>Saeed</name>
+        </author>
+        <link href="https://sdamadi.github.io/what-is-jacobian-and-why-do-we-need-it.html"/>
+        <id>https://sdamadi.github.io/what-is-jacobian-and-why-do-we-need-it.html</id>
+
+        <updated>2019-12-23T20:41:31-05:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://sdamadi.github.io/media/posts/4/" alt="" />
+                    Derivative of univariate functionTo understand what is Jacobian, we need to revisit the derivative of a univariate function wherein $f$ maps the real line into the real line, that is, $f: \mathbb{R} \rightarrow \mathbb{R} $. The derivative of $f$ denoted by $f'$ measures the sensitivity to change&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <img src="https://sdamadi.github.io/media/posts/4/" alt="" />
+                <h3 id="mcetoc_1dsqkbs450">Derivative of univariate function</h3>
+<p>To understand what is Jacobian, we need to revisit the derivative of a univariate function wherein $f$ maps the real line into the real line, that is, $f: \mathbb{R} \rightarrow \mathbb{R} $. The derivative of $f$ denoted by $f'$ measures the sensitivity to change of the function value (output value, $f(x)$) with respect to a change in its argument (input value, $x$). Now the question is how we can measure the change of a function whose inputs is a vector in $\mathbb{R}^n$. From this point on we will focus on the change in a value of a function and try to associate it to the derivative of a univariate function.</p>
+<p><strong>Note</strong>: $f'$ is also denoted by $\frac{df}{dx}$ which is read as the derivative of $f$ with respect to $x$. Here we have used $d$ since there is no other variables that derivative is being taken with respect to them.</p>
+<p><strong>Remark: </strong>If $x$ becomes a number in real line instead of a vector, the gradient becomes the derivative which was expected.</p>
+<h3 id="mcetoc_1dsqkdumb1">The gradient of a real-valued function</h3>
+<p>When $f$ takes on a vector $x \in \mathbb{R}^n$ where $x = [x_1, x_2, \cdots,x_n]^{\top}$ and maps it to a number on the real line, we write $f : \mathbb{R}^n \rightarrow \mathbb{R}$. Since we have the ability to play with each coordinate of $x$ to change the value of the function, the concept of gradient comes into the picture. The gradient is a vector with the same length of $x$ and each coordinate shows the change in the value of $f$ when the corresponding coordinate changes. Therefore, we write</p>
+<p> \begin{equation}<br>\nabla f = [\frac{\partial f}{\partial x_1}, \frac{\partial f}{\partial x_2}, \cdots, \frac{\partial f}{\partial x_n}]^{\top}<br>\end{equation}</p>
+<p>Here we use $\nabla$ (nabla) symbol to suppress the right hand side when we want to address all the changes along $n$ directions. Also, $\partial$ is used to clarify that other than (let's say $x_1$), there are other variables whose change can affect the valude of $f$.</p>
+<h3 id="mcetoc_1dsqmf85h2">Jacobian of a vector-valued function</h3>
+<p>Now let's get back to the question that I asked in the page title. You might say, "well, Jacobian matrix should be something that somehow connects to the change of a vector-valued function which takes a vector as its input". Yes correct! But how we do we write it?</p>
+<p>First notice that we have $f$ where $f: \mathbb{R}^n \rightarrow \mathbb{R}^m$, that is:</p>
+<p>$$<br> f(x)=f(x_1, x_2, \cdots,x_n)= \begin{bmatrix}<br> f_1(x_1, x_2, \cdots,x_n)\\ f_2(x_1, x_2, \cdots,x_n)\\ \vdots \\ f_n(x_1, x_2, \cdots,x_n)<br> \end{bmatrix}<br>$$</p>
+<p>As you can see the value of each function $f_i$ where $i= 1, 2, \cdots, m$ can vary when one of $x_j$'s changes. This is where Jacobian matrix comes into the picture. It is defined as the following:</p>
+<p>$$<br>J_f(x)= \begin{bmatrix}<br>\frac{\partial f_1}{\partial x_1} &amp; \frac{\partial f_1}{\partial x_2}&amp; \cdots&amp; \frac{\partial f_1}{\partial x_n}\\<br>\frac{\partial f_2}{\partial x_1} &amp; \frac{\partial f_2}{\partial x_2}&amp; \cdots&amp; \frac{\partial f_2}{\partial x_n}\\<br> \vdots &amp; \vdots &amp; \cdots &amp; \vdots\\<br>\frac{\partial f_m}{\partial x_1} &amp; \frac{\partial f_m}{\partial x_2}&amp; \cdots&amp; \frac{\partial f_m}{\partial x_n}<br>\end{bmatrix}<br>=<br>\begin{bmatrix}<br>\nabla^{\top} f_1\\<br>\nabla^{\top} f_2\\<br>\vdots\\<br>\nabla^{\top} f_n\\<br>\end{bmatrix}<br>$$</p>
+<p>By looking at $i$-th row of the Jacobian matrix, we see that it is transpose of the gradient of $f_i$, i.e., $(\nabla f_i)^{\top}$ which I denoted by $\nabla^{\top} f_i$ .</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Jacobian of a composition function: an example</title>
         <author>
@@ -17,17 +53,21 @@
         <link href="https://sdamadi.github.io/jacobian-of-a-composition-function.html"/>
         <id>https://sdamadi.github.io/jacobian-of-a-composition-function.html</id>
 
-        <updated>2019-12-23T18:00:05-05:00</updated>
+        <updated>2019-12-23T18:51:01-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://sdamadi.github.io/media/posts/3/" alt="" />
-                    In this post we are going to
+                    In this post we are going to see an example in which Jacobian operator is being applied on a composite function: Finite dimension is $\sqrt{x}$ What is Jacobian and why do we need it?
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
                     <img src="https://sdamadi.github.io/media/posts/3/" alt="" />
-                In this post we are going to
+                <p>In this post we are going to see an example in which Jacobian operator is being applied on a composite function:</p>
+<p> </p>
+<p><a href="https://en.wikipedia.org/wiki/Fr%C3%A9chet_derivative#Finite_dimensions">Finite dimension</a> is $\sqrt{x}$</p>
+<p> </p>
+<h1 id="mcetoc_1dsqin8so0">What is Jacobian and why do we need it?</h1>
             ]]>
         </content>
     </entry>
