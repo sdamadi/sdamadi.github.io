@@ -3,7 +3,7 @@
     <title>Saeed Damadi</title>
     <link href="https://sdamadi.github.io/feed.xml" rel="self" />
     <link href="https://sdamadi.github.io" />
-    <updated>2019-12-23T21:37:00-05:00</updated>
+    <updated>2019-12-23T23:09:14-05:00</updated>
     <author>
         <name>Saeed</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://sdamadi.github.io/what-is-jacobian-and-why-do-we-need-it.html"/>
         <id>https://sdamadi.github.io/what-is-jacobian-and-why-do-we-need-it.html</id>
 
-        <updated>2019-12-23T21:31:52-05:00</updated>
+        <updated>2019-12-23T23:08:46-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://sdamadi.github.io/media/posts/4/" alt="" />
@@ -44,13 +44,13 @@
 <p>By looking at $i$-th row of the Jacobian matrix, we see that it is transpose of the gradient of $f_i$, i.e., $(\nabla f_i)^{\top}$ which I denoted by $\nabla^{\top} f_i$ . </p>
 <p><strong>Remark 1</strong>: If $f$ becomes a scalar-valued function and $x$ becomes a number in real line instead of a vector, the Jacobian matrix becomes the derivative!</p>
 <p><strong>Remark 2</strong>: Jacobian matrix is the matrix of all first-order partial derivatives of the function.</p>
-<h3 id="mcetoc_1dsqpjd0t0">Why do we need Jacobian matrix?</h3>
+<h3 id="need">Why do we need Jacobian matrix?</h3>
 <p>Jacobian of a composition function is the product of the Jacobian matrices of each functions. Suppose we have the following fucntion:</p>
 <p>$$<br>f (x)= f_1(f_2(\cdots( f_n(x) ) ) = f_1 \circ f_2 \circ \cdots\circ f_n(x)<br>$$</p>
 <p>The Jacobian matrix of $f$ with respect to $x$ is:</p>
 <p>$$<br>J_f = J_{f_1} \cdot J_{f_2} \cdots J_{f_n}(x)<br>$$</p>
 <p>However, there is a big caveat here; in order to find Jacobian matrix of $f$, we need to find all other Jacobian matrices. We know Jacobian matrix is all first-order partial derivatives of the vector-valued function with respect to its variable. But what is the variable of, let's say $f_1$? The variable of $f_1$ is the f but $f_1$, i.e., $f_2(f_3(\cdots( f_n(x) ) ) = f_2 \circ f_3 \circ \cdots\circ f_n(x)$. </p>
-<p><a href="https://sdamadi.github.io/jacobian-of-a-composition-function.html">In this post</a> I will go through an example and clarify all those abstract concepts that were discussed in the last paragraph.</p>
+<p>I will go through an example and clarify all those abstract concepts that were discussed in the last paragraph in <a href="https://sdamadi.github.io/jacobian-of-a-composition-function.html">this post</a>. </p>
             ]]>
         </content>
     </entry>
