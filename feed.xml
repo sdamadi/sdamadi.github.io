@@ -3,12 +3,53 @@
     <title>Saeed Damadi</title>
     <link href="https://sdamadi.github.io/feed.xml" rel="self" />
     <link href="https://sdamadi.github.io" />
-    <updated>2019-12-25T14:54:07-05:00</updated>
+    <updated>2019-12-25T15:06:01-05:00</updated>
     <author>
         <name>Saeed</name>
     </author>
     <id>https://sdamadi.github.io</id>
 
+    <entry>
+        <title>Compute the gradient of a neural network</title>
+        <author>
+            <name>Saeed</name>
+        </author>
+        <link href="https://sdamadi.github.io/compute-the-gradient-of-neural-network-loss-function.html"/>
+        <id>https://sdamadi.github.io/compute-the-gradient-of-neural-network-loss-function.html</id>
+
+        <updated>2019-12-25T14:58:08-05:00</updated>
+            <summary></summary>
+        <content></content>
+    </entry>
+    <entry>
+        <title>What is Jacobian matrix of $f(x)&#x3D; Ax$?</title>
+        <author>
+            <name>Saeed</name>
+        </author>
+        <link href="https://sdamadi.github.io/what-is-jacobian-matrix-of-dollarfx-axdollar.html"/>
+        <id>https://sdamadi.github.io/what-is-jacobian-matrix-of-dollarfx-axdollar.html</id>
+
+        <updated>2019-12-25T15:05:45-05:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://sdamadi.github.io/media/posts/5/" alt="" />
+                    In this short post we are going to find the Jacobian matrix of $f(x)= Ax$ where $f: \mathbb{R}^n \rightarrow \mathbb{R}^m$, $x \in \mathbb{R}^n$, and $A \in \mathbb{R}^{m \times n}$. 
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <img src="https://sdamadi.github.io/media/posts/5/" alt="" />
+                <p>In this short post we are going to find the Jacobian matrix of $f(x)= Ax$ where $f: \mathbb{R}^n \rightarrow \mathbb{R}^m$, $x \in \mathbb{R}^n$, and $A \in \mathbb{R}^{m \times n}$.</p>
+<h3 id="mcetoc_1dsvafce90">Why this function is so important?</h3>
+<ol>
+<li>It is a linear function</li>
+<li>It will apper in neural network when we want to find the loss function</li>
+<li>It generalize $f(x)= ax$ where $x$, and $a$ are scalars.</li>
+</ol>
+<p> </p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>What is Jacobian matrix and why do we need it?</title>
         <author>
@@ -62,7 +103,7 @@
         <link href="https://sdamadi.github.io/jacobian-of-a-composition-function.html"/>
         <id>https://sdamadi.github.io/jacobian-of-a-composition-function.html</id>
 
-        <updated>2019-12-25T14:53:56-05:00</updated>
+        <updated>2019-12-25T14:59:09-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://sdamadi.github.io/media/posts/3/" alt="" />
@@ -102,7 +143,7 @@
 <p>$$<br> J_g(x, y) = \begin{bmatrix}<br>\frac{\partial g_1}{\partial x} &amp; \frac{\partial g_1}{\partial y} \\<br>\frac{\partial g_2}{\partial x} &amp; \frac{\partial g_2}{\partial y} <br> \end{bmatrix}=<br>\begin{bmatrix}<br>e^x\cos y &amp; -e^x\sin y \\ e^x\sin y &amp; e^x\cos y<br>\end{bmatrix}$$  </p>
 <p>Now to compute $J_f(g(u,v))$ <a href="#5b">using the fifth bullet</a> which yields<br>$$<br>\begin{align}<br>J_f(g(u,v)) &amp;= J_f(z = (u,v))\circ g(x,y)\\<br> &amp;= <br>\begin{bmatrix}<br>\frac{\partial f}{\partial u} &amp; \frac{\partial f}{\partial v}<br> \end{bmatrix} \circ g(x,y) \\<br>&amp;=\begin{bmatrix}<br>2u &amp; 6v<br>\end{bmatrix}\circ g(x,y)\\<br>&amp;=\begin{bmatrix}<br>2u &amp; 6v<br>\end{bmatrix}\circ<br>\begin{bmatrix}<br>e^{x}\cos y \\ e^{x}\sin y<br>\end{bmatrix}\\<br>&amp;=<br>\begin{bmatrix} 2e^{x}\cos y &amp; 6e^{x}\sin y \end{bmatrix}<br>\end{align}<br>$$<br><br>Finally,</p>
 <p>$$<br>\begin{align}<br>J_{h}(x,y) &amp;= J_{f \circ g}(x,y) = J_f(g(u,v)) J_g(x, y)\\<br>&amp;=<br>\begin{bmatrix} 2e^{x}\cos y &amp; 6e^{x}\sin y \end{bmatrix}<br>\begin{bmatrix}<br>e^x\cos y &amp; -e^x\sin y \\ e^x\sin y &amp; e^x\cos y<br>\end{bmatrix}\\<br>&amp;= <br>\begin{bmatrix}<br>2e^{2x}\cos^2y + 6e^{2x}\sin^2y &amp; -2e^{2x}\cos y \sin y + 6e^{2x}\sin y\cos y<br>\end{bmatrix} \\<br>&amp;= <br>2e^{2x}<br>\begin{bmatrix}<br>1 + 2\sin^2y &amp; 2\sin y\cos y <br>\end{bmatrix}<br>\end{align}\\<br>$$</p>
-<p> <strong>Conclusion: </strong>We went through all the steps of finding the Jacobian matrix of a composite function consists of two functions. It is one step left to apply all these result to the error function of a nueral network.</p>
+<p> <strong>Conclusion: </strong>We went through all the steps of finding the Jacobian matrix of a composite function consists of two functions. It is one step left to apply all these result to the lsos function of a neural network.</p>
 <p> </p>
             ]]>
         </content>
