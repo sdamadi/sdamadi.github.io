@@ -3,12 +3,82 @@
     <title>Saeed Damadi</title>
     <link href="https://sdamadi.github.io/feed.xml" rel="self" />
     <link href="https://sdamadi.github.io" />
-    <updated>2019-12-25T15:06:01-05:00</updated>
+    <updated>2019-12-26T00:41:04-05:00</updated>
     <author>
         <name>Saeed</name>
     </author>
     <id>https://sdamadi.github.io</id>
 
+    <entry>
+        <title>Linear neural network to creat $f(x)&#x3D; W^{\top}x+b$</title>
+        <author>
+            <name>Saeed</name>
+        </author>
+        <link href="https://sdamadi.github.io/linear-neural-network-to-creat-dollarfx-wtopxbdollar.html"/>
+        <id>https://sdamadi.github.io/linear-neural-network-to-creat-dollarfx-wtopxbdollar.html</id>
+
+        <updated>2019-12-25T21:44:39-05:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://sdamadi.github.io/media/posts/8/" alt="" />
+                    Next step is to extend the results we found here to get the nonlinear neural network. I will explain them in the next post. 
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <img src="https://sdamadi.github.io/media/posts/8/" alt="" />
+                <p>Next step is to extend the results we found here to get the nonlinear neural network. I will explain them in the next post.</p>
+<p> </p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Linear neural network to creat $f(x)&#x3D; W^{\top}x$ </title>
+        <author>
+            <name>Saeed</name>
+        </author>
+        <link href="https://sdamadi.github.io/how-to-use-linear-nn-to.html"/>
+        <id>https://sdamadi.github.io/how-to-use-linear-nn-to.html</id>
+
+        <updated>2019-12-25T21:36:49-05:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://sdamadi.github.io/media/posts/7/" alt="" />
+                    Goal:In this post we are going to go through the very first step that help us to suppress algebraic notations for representing the function calculating by a fully connected neural network. Following this step helps you to master shorthand notations to express operations happening in&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <img src="https://sdamadi.github.io/media/posts/7/" alt="" />
+                <h3 id="mcetoc_1dsvlh3sp0">Goal:</h3>
+<p>In this post we are going to go through the very first step that help us to suppress algebraic notations for representing the function calculating by a fully connected neural network. Following this step helps you to master shorthand notations to express operations happening in the neural network.</p>
+<h3 id="mcetoc_1dsvlhtoo1">A linear function in the form of $f(x)= W^{\top}x$</h3>
+<p><a href="https://sdamadi.github.io/what-is-jacobian-matrix-of-dollarfx-axdollar.html">In the previous post</a> we discussed how to find the Jacobian matrix of $f(x)= Ax$ where $A \in \mathbb{R}^{m \times n}$ and $x = [x_1, x_2, \cdots, x_n]^{\top}$. Also, I showed how to represent $f(x)$ in terms of rows of $A$. However, here, we are dealing with $W^{\top}$ in place of $A$ where $W \in \mathbb{R}^{n \times m}$  which requires us to do some work. In order to show how we can build this function using a linear neural network. Suppose $y= f(x)$. Therefore, each coordinate of $f(x)$ equals to each coordinate of a $y$. That is</p>
+<p>$$<br>\begin{align}<br>y &amp;= <br>\begin{bmatrix}<br>y_1\\<br>y_2\\<br>\vdots\\<br>y_n<br>\end{bmatrix} =<br>f(x)=W^{\top}x\\<br>&amp;\stackrel{(1)}{=}<br>\begin{bmatrix}<br>W_{\bullet1} &amp; W_{\bullet2} &amp; \cdots &amp; W_{\bullet m}<br>\end{bmatrix}^{\top}x\\<br>&amp;\stackrel{(2)}{=}<br>\begin{bmatrix}<br>W_{\bullet 1}\\<br>W_{\bullet 2}\\\\<br>\vdots\\<br>W_{\bullet m}\\<br>\end{bmatrix}x<br>\stackrel{(3)}{=}<br>\begin{bmatrix}<br>W_{\bullet 1}x\\<br>W_{\bullet 2}x\\\\<br>\vdots\\<br>W_{\bullet m}x\\<br>\end{bmatrix}\\<br>&amp;\stackrel{(4)}{=}<br>\begin{bmatrix}<br>w_{11}x_1 + w_{21}x_2 + \cdots + w_{n1}x_n\\<br>w_{12}x_1 + w_{22}x_2 + \cdots + w_{n2}x_n\\<br>\vdots\\<br>w_{1m}x_1 + w_{2m}x_2 + \cdots + w_{nm}x_n\\<br>\end{bmatrix}<br>\end{align}<br>$$</p>
+<p>where $W_{i\bullet}$ is the $i$-th row of $W$ and $W_{\bullet j}$ is the $j$-th column of $W$. Also,</p>
+<ul>
+<li>(1) is the representation of $W$ columnwise with $m$ columns($W \in \mathbb{R}^{n \times m}$)</li>
+<li>(2) is the transpose of $w$ so every column becomes a row</li>
+<li>(3) and (4) are because of matrix multiplication rule</li>
+</ul>
+<p>I had promissed to represent $f(x)= W^{\top}x$ using neural network. To that end, look at the following simple neural network where we have only input and output layers. Input layer has $2$ elements and output layer has $3$ leyers. Each input gets multiplied by its corresponding weight and adds to the other product in order to build each element of $y$.</p>
+<figure class="post__image post__image--center" ><img src="https://sdamadi.github.io/media/posts/7/Simplest-neural-network-without-weights.png" alt="Simlest neural network" width="300" height="231">
+<figcaption >A simple inear neural network without weight assignments</figcaption>
+</figure>
+<p>If I annotate every arrow using a weight $w$ whose first index is associated with input and second one with the output we have the following network.</p>
+<figure class="post__image post__image--center" ><img src="https://sdamadi.github.io/media/posts/7/NN-With-weights.png" alt="With weights" width="300" height="227">
+<figcaption >A simple inear neural network with weight assignments</figcaption>
+</figure>
+<p> If you carefully look, we can write each element of $y$ using linear combination of $x$'s element and $w$'s as the following</p>
+<p>$$<br>\begin{align}<br>y &amp;= <br>\begin{bmatrix}<br>y_1\\<br>y_2\\<br>y_3\\<br>\end{bmatrix} =<br>\begin{bmatrix}<br>W_{11}x_1 + W_{21}x_2 \\<br>W_{12}x_1 + W_{22}x_2 n\\<br>W_{13}x_1 + W_{23}x_2 \\<br>\end{bmatrix}\\<br>&amp;=<br>\begin{bmatrix}<br>W_{11} &amp; W_{21}\\<br>W_{12} &amp; W_{22}\\<br>W_{13} &amp; W_{23} \\<br>\end{bmatrix}<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>\end{bmatrix}\\<br>&amp;=<br>\begin{bmatrix}<br>W_{11} &amp; W_{12} &amp; W_{13}\\<br>W_{21} &amp; W_{22} &amp; W_{23}\\<br>\end{bmatrix}^{\top}<br>\begin{bmatrix}<br>x_1\\<br>x_2\\<br>\end{bmatrix}<br>=W^{\top}x = f(x)<br>\end{align}<br>$$<br><br></p>
+<p>Hence, from now on, I will assign $W$ between each two layers because we can think of them as input($x$) and output($y$) where output formula is $y = W^{\top}x$.</p>
+<figure class="post__image post__image--center" ><img src="https://sdamadi.github.io/media/posts/7/Single-leyer-Single-Weight.png" alt="One weight" width="300" height="659">
+<figcaption >Shorthand notation</figcaption>
+</figure>
+<p>In the next post I will add another element to our function which is called biass and because of that our function would be $W^{\top}x + b$.</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Compute the gradient of a neural network</title>
         <author>
@@ -29,11 +99,11 @@
         <link href="https://sdamadi.github.io/what-is-jacobian-matrix-of-dollarfx-axdollar.html"/>
         <id>https://sdamadi.github.io/what-is-jacobian-matrix-of-dollarfx-axdollar.html</id>
 
-        <updated>2019-12-25T15:05:45-05:00</updated>
+        <updated>2019-12-25T17:55:43-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://sdamadi.github.io/media/posts/5/" alt="" />
-                    In this short post we are going to find the Jacobian matrix of $f(x)= Ax$ where $f: \mathbb{R}^n \rightarrow \mathbb{R}^m$, $x \in \mathbb{R}^n$, and $A \in \mathbb{R}^{m \times n}$. 
+                    In this short post we are going to find the Jacobian matrix of $f(x)= Ax$ where $f: \mathbb{R}^n \rightarrow \mathbb{R}^m$, $x \in \mathbb{R}^n$, and $A \in \mathbb{R}^{m \times n}$. As I explained here, in order to find the Jacobian matrix we need a vector-valued function&hellip;
                 ]]>
             </summary>
         <content type="html">
@@ -43,10 +113,13 @@
 <h3 id="mcetoc_1dsvafce90">Why this function is so important?</h3>
 <ol>
 <li>It is a linear function</li>
-<li>It will apper in neural network when we want to find the loss function</li>
+<li>It appers in neural networks when we want to find <a href="https://sdamadi.github.io/compute-the-gradient-of-neural-network-loss-function.html">the loss function</a></li>
 <li>It generalize $f(x)= ax$ where $x$, and $a$ are scalars.</li>
 </ol>
-<p> </p>
+<p><a href="https://sdamadi.github.io/what-is-jacobian-and-why-do-we-need-it.html#mcetoc_1dsqmf85h2">As I explained here</a>, in order to find the Jacobian matrix we need a vector-valued function which we have but one should be able to represent each coordinte of $f$ as a function so we do the following:</p>
+<p>$$<br>\begin{align}<br>f(x)&amp;= Ax =<br>\begin{bmatrix}<br>A_{1\bullet}\\<br>A_{2\bullet}\\<br>\vdots\\<br>A_{m\bullet}\\<br>\end{bmatrix}<br>x<br>=<br>\begin{bmatrix}<br>A_{1\bullet}x\\<br>A_{2\bullet}x\\<br>\vdots\\<br>A_{m\bullet}x\\<br>\end{bmatrix}=<br>\begin{bmatrix}<br>f_1(x)\\<br>f_2(x)\\<br>\vdots\\<br>f_n(x)\\<br>\end{bmatrix}\\<br>&amp;=<br>\begin{bmatrix}<br>a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n\\<br>a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n\\<br>\vdots\\<br>a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_nx\\<br>\end{bmatrix}\\<br>\end{align}<br>$$</p>
+<p>where $A_{i\bullet}$ is the $i$-th row of $A$ and $x = [x_1, x_2, \cdots, x_n]^{\top}$.<br>Hence according to what we discussed <a href="https://sdamadi.github.io/what-is-jacobian-and-why-do-we-need-it.html">in the other post</a>,<br>$$<br>J_f(x) = \begin{bmatrix}<br>a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n}\\<br>a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n}\\<br>\vdots &amp; \vdots &amp; \cdots &amp; \vdots\\<br>a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}\\<br>\end{bmatrix}<br>=A<br>$$</p>
+<p><strong>Note</strong>: It does not make any differences if we add a constant vector $b$ to $Ax$, i.e., $f(x) = Ax + b$.</p>
             ]]>
         </content>
     </entry>
@@ -103,7 +176,7 @@
         <link href="https://sdamadi.github.io/jacobian-of-a-composition-function.html"/>
         <id>https://sdamadi.github.io/jacobian-of-a-composition-function.html</id>
 
-        <updated>2019-12-25T14:59:09-05:00</updated>
+        <updated>2019-12-25T15:08:55-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://sdamadi.github.io/media/posts/3/" alt="" />
@@ -143,7 +216,7 @@
 <p>$$<br> J_g(x, y) = \begin{bmatrix}<br>\frac{\partial g_1}{\partial x} &amp; \frac{\partial g_1}{\partial y} \\<br>\frac{\partial g_2}{\partial x} &amp; \frac{\partial g_2}{\partial y} <br> \end{bmatrix}=<br>\begin{bmatrix}<br>e^x\cos y &amp; -e^x\sin y \\ e^x\sin y &amp; e^x\cos y<br>\end{bmatrix}$$  </p>
 <p>Now to compute $J_f(g(u,v))$ <a href="#5b">using the fifth bullet</a> which yields<br>$$<br>\begin{align}<br>J_f(g(u,v)) &amp;= J_f(z = (u,v))\circ g(x,y)\\<br> &amp;= <br>\begin{bmatrix}<br>\frac{\partial f}{\partial u} &amp; \frac{\partial f}{\partial v}<br> \end{bmatrix} \circ g(x,y) \\<br>&amp;=\begin{bmatrix}<br>2u &amp; 6v<br>\end{bmatrix}\circ g(x,y)\\<br>&amp;=\begin{bmatrix}<br>2u &amp; 6v<br>\end{bmatrix}\circ<br>\begin{bmatrix}<br>e^{x}\cos y \\ e^{x}\sin y<br>\end{bmatrix}\\<br>&amp;=<br>\begin{bmatrix} 2e^{x}\cos y &amp; 6e^{x}\sin y \end{bmatrix}<br>\end{align}<br>$$<br><br>Finally,</p>
 <p>$$<br>\begin{align}<br>J_{h}(x,y) &amp;= J_{f \circ g}(x,y) = J_f(g(u,v)) J_g(x, y)\\<br>&amp;=<br>\begin{bmatrix} 2e^{x}\cos y &amp; 6e^{x}\sin y \end{bmatrix}<br>\begin{bmatrix}<br>e^x\cos y &amp; -e^x\sin y \\ e^x\sin y &amp; e^x\cos y<br>\end{bmatrix}\\<br>&amp;= <br>\begin{bmatrix}<br>2e^{2x}\cos^2y + 6e^{2x}\sin^2y &amp; -2e^{2x}\cos y \sin y + 6e^{2x}\sin y\cos y<br>\end{bmatrix} \\<br>&amp;= <br>2e^{2x}<br>\begin{bmatrix}<br>1 + 2\sin^2y &amp; 2\sin y\cos y <br>\end{bmatrix}<br>\end{align}\\<br>$$</p>
-<p> <strong>Conclusion: </strong>We went through all the steps of finding the Jacobian matrix of a composite function consists of two functions. It is one step left to apply all these result to the lsos function of a neural network.</p>
+<p> <strong>Conclusion: </strong>We went through all the steps of finding the Jacobian matrix of a composite function consists of two functions. It is one step left to apply all these result to <a href="https://sdamadi.github.io/compute-the-gradient-of-neural-network-loss-function.html">the lsos function of a neural network</a>.</p>
 <p> </p>
             ]]>
         </content>
