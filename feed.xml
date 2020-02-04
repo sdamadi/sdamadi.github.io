@@ -3,21 +3,104 @@
     <title>Saeed Damadi</title>
     <link href="https://sdamadi.github.io/feed.xml" rel="self" />
     <link href="https://sdamadi.github.io" />
-    <updated>2019-12-26T03:03:33-05:00</updated>
+    <updated>2020-02-04T14:29:16-05:00</updated>
     <author>
         <name>Saeed</name>
     </author>
     <id>https://sdamadi.github.io</id>
 
     <entry>
-        <title>Nonlinear neural network to creat $F(x)&#x3D;f( W^{\top}x+b)$</title>
+        <title>Steps towards understanding lottery ticket</title>
+        <author>
+            <name>Saeed</name>
+        </author>
+        <link href="https://sdamadi.github.io/steps-towards-understanding-lottery-ticket.html"/>
+        <id>https://sdamadi.github.io/steps-towards-understanding-lottery-ticket.html</id>
+
+        <updated>2020-01-09T03:33:57-05:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://sdamadi.github.io/media/posts/10/" alt="" />
+                    The following codes have to be understood Steps to take to see what is going on in the MNIST classification: Ckeck what is the difference between batch and SGD gradient using codes
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <img src="https://sdamadi.github.io/media/posts/10/" alt="" />
+                <p>The following codes have to be understood</p>
+<ol>
+<li><a href="https://github.com/Eric-mingjie/rethinking-network-pruning">Rethinking the Value of Network Pruning</a>(challenging lottery ticket)</li>
+<li><a href="https://github.com/jack-willturner/DeepCompression-PyTorch">Learning both weights and connections for efficient neural network</a>(magnitude pruning)</li>
+<li><a href="https://github.com/google-research/google-research/tree/master/state_of_sparsity">The state of sparsity in deep neural networks</a>(the code is written by TensorFLow)</li>
+</ol>
+<p>Steps to take to see what is going on in the MNIST classification:</p>
+<ol>
+<li>Create two networks, one using cnn and the other one using just mlp.
+<ul>
+<li>add transform to see the result</li>
+<li>check if ReLU for fc2 works better</li>
+<li>what is the number of required neurons in fc2</li>
+<li>What is the mathematical intuition of momentum?</li>
+<li>What does the meaning of dropout?</li>
+<li>How to visualize the filters?</li>
+<li>See how See how the following gives a 3x3 colored filter. </li>
+<li>conv1 = nn.Conv2d(3, 1, 3)</li>
+<li>weight = conv1.weight.data.numpy()</li>
+<li>print(weight.shape)</li>
+<li>plt.imshow(weight[0, ...])</li>
+<li>LeNet is to be added and sizes should be matched be careful about the last layer</li>
+<li>How to use Tensorboard</li>
+<li>biases of the network should be in the pruning</li>
+</ul>
+</li>
+<li>create python files for models not with jupyter to run them seamlessly.</li>
+<li>See what is the number of parameters for each.</li>
+<li>Apply lottory pruning (lottery ticket) to see the result.</li>
+<li>Compare local pruning to global pruning where we bring all the weights into a pool and prune the weights percentage at each level.</li>
+<li>Devide MNIST into two halves and train it while you are pruning it and apply that ticket to see if that works for the other network.</li>
+<li>Look at what was my conclusion with Erfan</li>
+</ol>
+<p>Ckeck what is the difference between batch and SGD gradient using codes</p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Stochastic gradient descent versus batch gradient descent</title>
+        <author>
+            <name>Saeed</name>
+        </author>
+        <link href="https://sdamadi.github.io/stochastic-gradient-descent-versus-batch-gradient-descent.html"/>
+        <id>https://sdamadi.github.io/stochastic-gradient-descent-versus-batch-gradient-descent.html</id>
+
+        <updated>2019-12-26T18:34:32-05:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://sdamadi.github.io/media/posts/9/" alt="" />
+                    The applicability of batch or stochastic gradient descent really depends on the error manifold expected. Batch gradient descent computes the gradient using the whole dataset. This is great for convex, or relatively smooth error manifolds. In this case, we move somewhat directly towards an optimum&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <img src="https://sdamadi.github.io/media/posts/9/" alt="" />
+                <p>The applicability of batch or stochastic gradient descent really depends on the error manifold expected.</p>
+<p>Batch gradient descent computes the gradient using the whole dataset. This is great for convex, or relatively smooth error manifolds. In this case, we move somewhat directly towards an optimum solution, either local or global. Additionally, batch gradient descent, given an annealed learning rate, will eventually find the minimum located in it's basin of attraction.</p>
+<p>Stochastic gradient descent (SGD) computes the gradient using a single sample. Most applications of SGD actually use a minibatch of several samples, for reasons that will be explained a bit later. SGD works well (Not well, I suppose, but better than batch gradient descent) for error manifolds that have lots of local maxima/minima. In this case, the somewhat noisier gradient calculated using the reduced number of samples tends to jerk the model out of local minima into a region that hopefully is more optimal. Single samples are really noisy, while minibatches tend to average a little of the noise out. Thus, the amount of jerk is reduced when using minibatches. A good balance is struck when the minibatch size is small enough to avoid some of the poor local minima, but large enough that it doesn't avoid the global minima or better-performing local minima. (Incidently, this assumes that the best minima have a larger and deeper basin of attraction, and are therefore easier to fall into.)</p>
+<p>One benefit of SGD is that it's computationally a whole lot faster. Large datasets often can't be held in RAM, which makes vectorization much less efficient. Rather, each sample or batch of samples must be loaded, worked with, the results stored, and so on. Minibatch SGD, on the other hand, is usually intentionally made small enough to be computationally tractable.</p>
+<p>Usually, this computational advantage is leveraged by performing many more iterations of SGD, making many more steps than conventional batch gradient descent. This usually results in a model that is very close to that which would be found via batch gradient descent, or better.</p>
+<p>The way I like to think of how SGD works is to imagine that I have one point that represents my input distribution. My model is attempting to learn that input distribution. Surrounding the input distribution is a shaded area that represents the input distributions of all of the possible minibatches I could sample. It's usually a fair assumption that the minibatch input distributions are close in proximity to the true input distribution. Batch gradient descent, at all steps, takes the steepest route to reach the true input distribution. SGD, on the other hand, chooses a random point within the shaded area, and takes the steepest route towards this point. At each iteration, though, it chooses a new point. The average of all of these steps will approximate the true input distribution, usually quite well.</p>
+<p>In practice, nobody uses Batch Gradient Descent. It's simply too computationally expensive for not that much of a gain. (The gain being that you're actually stepping down the "true" gradient.) When you have a highly non-convex loss function you just need to step in mostly the right direction and you'll eventually converge on a local minimum. Thus, minibatch SGD.</p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Creating nonlinear neural network and finding the Jacobian matrix of its funciton</title>
         <author>
             <name>Saeed</name>
         </author>
         <link href="https://sdamadi.github.io/linear-neural-network-to-creat-dollarfx-wtopxbdollar.html"/>
         <id>https://sdamadi.github.io/linear-neural-network-to-creat-dollarfx-wtopxbdollar.html</id>
 
-        <updated>2019-12-26T03:02:21-05:00</updated>
+        <updated>2019-12-28T20:28:49-05:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://sdamadi.github.io/media/posts/8/" alt="" />
@@ -31,23 +114,30 @@
 <figure class="post__image post__image--center" ><img src="https://sdamadi.github.io/media/posts/8/Neural-Network-with-bias.png" alt="" width="300" height="628">
 <figcaption >Adding bias to the neural network</figcaption>
 </figure>
-<p> If we pass the above quantity to the function $f$, we get $F(x)$.</p>
+<p>Now to create a nonlinear function $F(x)=f( W^{\top}x+b)$, we need to pass in the above quantity to the function $f$, which produces $F(x)$.</p>
 <h3 id="mcetoc_1dt0dnt1e0"> Jacobian matrix of $F(x)=f( W^{\top}x+b)$</h3>
-<p>A relevant question at this moment is how we can find the Jacobian of $F(x)$ using what we learned <a href="https://sdamadi.github.io/what-is-jacobian-and-why-do-we-need-it.html">in this post</a> and <a href="https://sdamadi.github.io/jacobian-of-a-composition-function.html">the other one</a>s. We know Jacobian matrix of a composite function is the product of Jacobians so </p>
+<p>A relevant question at this moment is how we can find the Jacobian of $F(x)$ using what we learned <a href="https://sdamadi.github.io/what-is-jacobian-and-why-do-we-need-it.html">in this post</a> and <a href="https://sdamadi.github.io/jacobian-of-a-composition-function.html">the other one</a>. We know Jacobian matrix of a composite function is the product of Jacobians so </p>
 <p>$$<br>J_F(x) = J_{f}(W^{\top}x+b)J_{W^{\top}x+b}(x) = J_{f}(h)\circ (W^{\top}x+b) J_{W^{\top}x+b}(x)<br>$$</p>
 <p>where $h = W^{\top}x+b$. Note that Jacobian of $f$ is being taken with respect to $h$. In neural networks $f$ is a scalar function which is applied to each element of $h$ separately so we have the following</p>
 <p>$$<br>f(h) = <br>\begin{bmatrix}<br>f(h_1)\\<br>f(h_2)\\<br>\vdots\\<br>f(h_m)<br>\end{bmatrix}<br>$$</p>
 <p>According to what we have discussed <a href="https://sdamadi.github.io/what-is-jacobian-and-why-do-we-need-it.html">here</a>, $J_f(h)$ is all first-order partial derivatives of $f(h)$ as the following</p>
 <p>$$<br>J_f(h)= \begin{bmatrix}<br>\frac{\partial f(h_1)}{\partial h_1} &amp; \frac{\partial f(h_1)}{\partial h_2}&amp; \cdots&amp; \frac{\partial f(h_1)}{\partial h_m}\\<br>\frac{\partial f(h_2)}{\partial h_1} &amp; \frac{\partial f(h_2)}{\partial h_2}&amp; \cdots&amp; \frac{\partial f(h_2)}{\partial h_m}\\<br>\vdots &amp; \vdots &amp; \cdots &amp; \vdots\\<br>\frac{\partial f(h_m)}{\partial h_1} &amp; \frac{\partial f(h_m)}{\partial h_2}&amp; \cdots&amp; \frac{\partial f(h_m)}{\partial h_m}<br>\end{bmatrix}<br>=<br>\begin{bmatrix}<br>\frac{\partial f(h_1)}{\partial h_1} &amp; 0&amp; \cdots&amp; 0\\<br>0 &amp; \frac{\partial f(h_2)}{\partial h_2}&amp; \cdots&amp; 0\\<br>\vdots &amp; \vdots &amp; \cdots &amp; \vdots\\<br>0 &amp; 0&amp; \cdots&amp; \frac{\partial f(h_m)}{\partial h_m}<br>\end{bmatrix}<br>$$</p>
-<p>It is remarkable that because of the structure that we define for the neural network, we get a diagonal matrix for the Jacobian of $J_f(h)$ where each element of diagonal is the same. However, we are after $J_{f}(h)\circ (W^{\top}x+b)$ which says whereever we have one coordinate of $h$, i.e., $h_i$ where $i = 1, 2, \cdots, m$, substitute the coresponding coordinate of $W^{\top}x+b$.</p>
+<p>It is remarkable that because of the structure that we define for the neural network, we get a diagonal matrix for the Jacobian of $J_f(h)$ where each element of its diagonal is functionally the same but is being represented by different variables. However, we are after $J_{f}(h)\circ (W^{\top}x+b)$ which says wherever we have one coordinate of $h$, i.e., $h_i$ where $i = 1, 2, \cdots, m$, substitute the coresponding coordinate of $W^{\top}x+b$.</p>
 <p>$$<br>\begin{align}<br>J_f(h)\circ (W^{\top}x+b)<br>&amp;=<br>\begin{bmatrix}<br>\frac{\partial f(h_1)}{\partial h_1} &amp; 0&amp; \cdots&amp; 0\\<br>0 &amp; \frac{\partial f(h_2)}{\partial h_2}&amp; \cdots&amp; 0\\<br>\vdots &amp; \vdots &amp; \cdots &amp; \vdots\\<br>0 &amp; 0&amp; \cdots&amp; \frac{\partial f(h_m)}{\partial h_m}<br>\end{bmatrix}\circ (W^{\top}x+b)\\<br>&amp;=<br>\begin{bmatrix}<br>f'(h_1) &amp; 0&amp; \cdots&amp; 0\\<br>0 &amp; f'(h_2)&amp; \cdots&amp; 0\\<br>\vdots &amp; \vdots &amp; \cdots &amp; \vdots\\<br>0 &amp; 0&amp; \cdots&amp; f'(h_m)<br>\end{bmatrix}<br>=\phi'_f(h)<br>\end{align}<br>$$</p>
 <p>where $\phi'_f(h)$ is defined as a digonal matrix whose diagonal is the derivative of $f$ at the corresponding coordinates of $h$. </p>
 <p><a href="https://sdamadi.github.io/what-is-jacobian-matrix-of-dollarfx-axdollar.html">From this post</a> we know Jacobian matrix of $J_{W^{\top}x+b}(x)$ is just $W^{\top}$.</p>
 <p>Therefore, $$<br>J_F(x) = J_{f}(h)\circ (W^{\top}x+b) J_{W^{\top}x+b}(x) = \phi'_f(h)W^{\top}<br>$$</p>
-<p>To recap what we have done so far take a look at suppressed network to see how by looking at the structure of the network we can find the Jacobian matrix.</p>
-<p> </p>
-<p>We are going to put different layers to gether and use the above result to find the Jacobian matrix of a neural network.</p>
-<p> </p>
+<p>In the following I am going to elaborate on a neural network that has more layer than input and output and derive its Jacobian matrix. Consifer the following network</p>
+<figure class="post__image post__image--center" ><img src="https://sdamadi.github.io/media/posts/8/two-layers.png" width="600" height="876">
+<figcaption >A nonlinear neural network with more than input and output layers </figcaption>
+</figure>
+<p> Using the above we can write </p>
+<p>$$<br>\begin{align}<br>F(x)&amp;=a_2\\<br>&amp;= f_2(w_2^{\top}a_1+b_2)\\<br>F(x)&amp;=<br>f_2(w_2^{\top}f_1(w_1^{\top}x+b_1)+b_2)\\<br>F(x)&amp;=f_2\circ(w_2^{\top}u+b_2)\circ f_1( w_1^{\top}x+b_1) <br>\end{align}<br>$$</p>
+<p>Since $a_1 = w_1^{\top}x+b_1$.</p>
+<p>In order to find the Jacobian matrix with respect to the input we have to use the multiplication rule that we derived here. Therefore,</p>
+<p>$$<br>\begin{align}<br>J_F(x)&amp;= J_{f_2}(w_2^{\top} a_1 + b_2) J_{f_1}(w_1^{\top} x + b_1)\\<br>&amp;= \phi'_{f_2}(a_2)w_2^{\top}\phi'_{f_1}(a_1)w_1^{\top}<br>\end{align}<br>$$</p>
+<p>If you associate the above formula with the figure, you can conclude that no matter how many layers we have, the same pattern would repeat for them.</p>
+<p>To recap what we have done so far, we can claim that by looking at the suppressed network, we can find the Jacobian matrix. </p>
             ]]>
         </content>
     </entry>
