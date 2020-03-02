@@ -3,40 +3,12 @@
     <title>Saeed Damadi</title>
     <link href="https://sdamadi.github.io/feed.xml" rel="self" />
     <link href="https://sdamadi.github.io" />
-    <updated>2020-03-01T22:10:45-05:00</updated>
+    <updated>2020-03-01T22:13:16-05:00</updated>
     <author>
         <name>Saeed</name>
     </author>
     <id>https://sdamadi.github.io</id>
 
-    <entry>
-        <title>Stochastic gradient descent versus batch gradient descent</title>
-        <author>
-            <name>Saeed</name>
-        </author>
-        <link href="https://sdamadi.github.io/stochastic-gradient-descent-versus-batch-gradient-descent.html"/>
-        <id>https://sdamadi.github.io/stochastic-gradient-descent-versus-batch-gradient-descent.html</id>
-
-        <updated>2019-12-26T18:34:32-05:00</updated>
-            <summary>
-                <![CDATA[
-                        <img src="https://sdamadi.github.io/media/posts/9/" alt="" />
-                    The applicability of batch or stochastic gradient descent really depends on the error manifold expected. Batch gradient descent computes the gradient using the whole dataset. This is great for convex, or relatively smooth error manifolds. In this case, we move somewhat directly towards an optimum&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                    <img src="https://sdamadi.github.io/media/posts/9/" alt="" />
-                <p>The applicability of batch or stochastic gradient descent really depends on the error manifold expected.</p>
-<p>Batch gradient descent computes the gradient using the whole dataset. This is great for convex, or relatively smooth error manifolds. In this case, we move somewhat directly towards an optimum solution, either local or global. Additionally, batch gradient descent, given an annealed learning rate, will eventually find the minimum located in it's basin of attraction.</p>
-<p>Stochastic gradient descent (SGD) computes the gradient using a single sample. Most applications of SGD actually use a minibatch of several samples, for reasons that will be explained a bit later. SGD works well (Not well, I suppose, but better than batch gradient descent) for error manifolds that have lots of local maxima/minima. In this case, the somewhat noisier gradient calculated using the reduced number of samples tends to jerk the model out of local minima into a region that hopefully is more optimal. Single samples are really noisy, while minibatches tend to average a little of the noise out. Thus, the amount of jerk is reduced when using minibatches. A good balance is struck when the minibatch size is small enough to avoid some of the poor local minima, but large enough that it doesn't avoid the global minima or better-performing local minima. (Incidently, this assumes that the best minima have a larger and deeper basin of attraction, and are therefore easier to fall into.)</p>
-<p>One benefit of SGD is that it's computationally a whole lot faster. Large datasets often can't be held in RAM, which makes vectorization much less efficient. Rather, each sample or batch of samples must be loaded, worked with, the results stored, and so on. Minibatch SGD, on the other hand, is usually intentionally made small enough to be computationally tractable.</p>
-<p>Usually, this computational advantage is leveraged by performing many more iterations of SGD, making many more steps than conventional batch gradient descent. This usually results in a model that is very close to that which would be found via batch gradient descent, or better.</p>
-<p>The way I like to think of how SGD works is to imagine that I have one point that represents my input distribution. My model is attempting to learn that input distribution. Surrounding the input distribution is a shaded area that represents the input distributions of all of the possible minibatches I could sample. It's usually a fair assumption that the minibatch input distributions are close in proximity to the true input distribution. Batch gradient descent, at all steps, takes the steepest route to reach the true input distribution. SGD, on the other hand, chooses a random point within the shaded area, and takes the steepest route towards this point. At each iteration, though, it chooses a new point. The average of all of these steps will approximate the true input distribution, usually quite well.</p>
-<p>In practice, nobody uses Batch Gradient Descent. It's simply too computationally expensive for not that much of a gain. (The gain being that you're actually stepping down the "true" gradient.) When you have a highly non-convex loss function you just need to step in mostly the right direction and you'll eventually converge on a local minimum. Thus, minibatch SGD.</p>
-            ]]>
-        </content>
-    </entry>
     <entry>
         <title>Creating nonlinear neural network and finding the Jacobian matrix of its funciton</title>
         <author>
