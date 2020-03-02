@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <title>Saeed Damadi</title>
+    <title>S. M. Saeed Damadi</title>
     <link href="https://sdamadi.github.io/feed.xml" rel="self" />
     <link href="https://sdamadi.github.io" />
-    <updated>2020-03-01T22:13:16-05:00</updated>
+    <updated>2020-03-02T15:43:03-05:00</updated>
     <author>
         <name>Saeed</name>
     </author>
@@ -21,7 +21,7 @@
             <summary>
                 <![CDATA[
                         <img src="https://sdamadi.github.io/media/posts/8/" alt="" />
-                    The next step towards finding loss function of a neural network is to extend the results we found here to add a bias to the linear function, i.e., creating $W^{\top}x+b$ where $x \in \mathbb{R}^n$, $b \in \mathbb{R}^m$, and $W \in \mathbb{R}^{n \times m}$. This can be done easily because&hellip;
+                    The next step towards finding loss function of a neural network is to extend&hellip;
                 ]]>
             </summary>
         <content type="html">
@@ -70,7 +70,7 @@
             <summary>
                 <![CDATA[
                         <img src="https://sdamadi.github.io/media/posts/7/" alt="" />
-                    Goal:In this post we are going to go through the very first step that help us to suppress algebraic notations for representing the function calculating by a fully connected neural network. Following this step helps you to master shorthand notations to express operations happening in&hellip;
+                    Goal:In this post we are going to go through the very first&hellip;
                 ]]>
             </summary>
         <content type="html">
@@ -129,7 +129,7 @@
             <summary>
                 <![CDATA[
                         <img src="https://sdamadi.github.io/media/posts/5/" alt="" />
-                    In this short post we are going to find the Jacobian matrix of $f(x)= Ax$ where $f: \mathbb{R}^n \rightarrow \mathbb{R}^m$, $x \in \mathbb{R}^n$, and $A \in \mathbb{R}^{m \times n}$. As I explained here, in order to find the Jacobian matrix we need a vector-valued function&hellip;
+                    In this short post we are going to find the Jacobian matrix&hellip;
                 ]]>
             </summary>
         <content type="html">
@@ -161,7 +161,7 @@
             <summary>
                 <![CDATA[
                         <img src="https://sdamadi.github.io/media/posts/4/" alt="" />
-                    Derivative of univariate functionTo understand what is Jacobian, we need to revisit the derivative of a univariate function wherein $f$ maps the real line into the real line, that is, $f: \mathbb{R} \rightarrow \mathbb{R} $. The derivative of $f$ denoted by $f'$ measures the sensitivity to change&hellip;
+                    Derivative of univariate functionTo understand what is Jacobian, we need to revisit&hellip;
                 ]]>
             </summary>
         <content type="html">
@@ -206,7 +206,7 @@
             <summary>
                 <![CDATA[
                         <img src="https://sdamadi.github.io/media/posts/3/" alt="" />
-                    This post is the continuation of what I have discussed here to clarify what is Jacobian matrix. We are going to see an example in which Jacobian matrix is being applied on a composite function including two functions. This case is very intuitive since it&hellip;
+                    This post is the continuation of what I have discussed here to&hellip;
                 ]]>
             </summary>
         <content type="html">
