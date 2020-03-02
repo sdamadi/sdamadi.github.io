@@ -10,21 +10,6 @@
     },
     "items": [
         {
-            "id": "https://sdamadi.github.io/steps-towards-understanding-lottery-ticket.html",
-            "url": "https://sdamadi.github.io/steps-towards-understanding-lottery-ticket.html",
-            "title": "Steps towards understanding lottery ticket",
-            "summary": "The following codes have to be understood Steps to take to see what is going on in the MNIST classification: Ckeck what is the difference between batch and SGD gradient using codes",
-            "content_html": "<p>The following codes have to be understood</p>\n<ol>\n<li><a href=\"https://github.com/Eric-mingjie/rethinking-network-pruning\">Rethinking the Value of Network Pruning</a>(challenging lottery ticket)</li>\n<li><a href=\"https://github.com/jack-willturner/DeepCompression-PyTorch\">Learning both weights and connections for efficient neural network</a>(magnitude pruning)</li>\n<li><a href=\"https://github.com/google-research/google-research/tree/master/state_of_sparsity\">The state of sparsity in deep neural networks</a>(the code is written by TensorFLow)</li>\n</ol>\n<p>Steps to take to see what is going on in the MNIST classification:</p>\n<ol>\n<li>Create two networks, one using cnn and the other one using just mlp.\n<ul>\n<li>add transform to see the result</li>\n<li>check if ReLU for fc2 works better</li>\n<li>what is the number of required neurons in fc2</li>\n<li>What is the mathematical intuition of momentum?</li>\n<li>What does the meaning of dropout?</li>\n<li>How to visualize the filters?</li>\n<li>See how See how the following gives a 3x3 colored filter. </li>\n<li>conv1 = nn.Conv2d(3, 1, 3)</li>\n<li>weight = conv1.weight.data.numpy()</li>\n<li>print(weight.shape)</li>\n<li>plt.imshow(weight[0, ...])</li>\n<li>LeNet is to be added and sizes should be matched be careful about the last layer</li>\n<li>How to use Tensorboard</li>\n<li>biases of the network should be in the pruning</li>\n</ul>\n</li>\n<li>create python files for models not with jupyter to run them seamlessly.</li>\n<li>See what is the number of parameters for each.</li>\n<li>Apply lottory pruning (lottery ticket) to see the result.</li>\n<li>Compare local pruning to global pruning where we bring all the weights into a pool and prune the weights percentage at each level.</li>\n<li>Devide MNIST into two halves and train it while you are pruning it and apply that ticket to see if that works for the other network.</li>\n<li>Look at what was my conclusion with Erfan</li>\n</ol>\n<p>Ckeck what is the difference between batch and SGD gradient using codes</p>",
-            "image": "https://sdamadi.github.io/media/posts/10/",
-            "author": {
-                "name": "Saeed"
-            },
-            "tags": [
-            ],
-            "date_published": "2020-01-02T15:17:26-05:00",
-            "date_modified": "2020-01-09T03:33:57-05:00"
-        },
-        {
             "id": "https://sdamadi.github.io/stochastic-gradient-descent-versus-batch-gradient-descent.html",
             "url": "https://sdamadi.github.io/stochastic-gradient-descent-versus-batch-gradient-descent.html",
             "title": "Stochastic gradient descent versus batch gradient descent",
