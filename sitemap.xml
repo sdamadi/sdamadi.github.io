@@ -1,23 +1,51 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="https://sdamadi.github.io/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 <url>
 <loc>https://sdamadi.github.io/</loc>
 </url>
 <url>
 <loc>https://sdamadi.github.io/compute-the-gradient-of-neural-network-loss-function.html</loc>
+<lastmod>2019-12-25T14:58:08-05:00</lastmod>
 </url>
 <url>
 <loc>https://sdamadi.github.io/how-to-use-linear-nn-to.html</loc>
+<lastmod>2019-12-25T21:36:49-05:00</lastmod>
+<image:image>
+<image:loc>https://sdamadi.github.io/media\posts\7/Simplest-neural-network-without-weights.png</image:loc>
+<image:title><![CDATA[Simlest neural network]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://sdamadi.github.io/media\posts\7/NN-With-weights.png</image:loc>
+<image:title><![CDATA[With weights]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://sdamadi.github.io/media\posts\7/Single-leyer-Single-Weight.png</image:loc>
+<image:title><![CDATA[One weight]]></image:title>
+</image:image>
 </url>
 <url>
 <loc>https://sdamadi.github.io/jacobian-of-a-composition-function.html</loc>
+<lastmod>2019-12-25T15:08:55-05:00</lastmod>
 </url>
 <url>
 <loc>https://sdamadi.github.io/linear-neural-network-to-creat-dollarfx-wtopxbdollar.html</loc>
+<lastmod>2019-12-28T20:28:49-05:00</lastmod>
+<image:image>
+<image:loc>https://sdamadi.github.io/media\posts\8/Neural-Network-with-bias.png</image:loc>
+<image:title><![CDATA[]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://sdamadi.github.io/media\posts\8/two-layers.png</image:loc>
+<image:title><![CDATA[]]></image:title>
+</image:image>
 </url>
 <url>
 <loc>https://sdamadi.github.io/what-is-jacobian-and-why-do-we-need-it.html</loc>
+<lastmod>2019-12-23T21:31:52-05:00</lastmod>
 </url>
 <url>
 <loc>https://sdamadi.github.io/what-is-jacobian-matrix-of-dollarfx-axdollar.html</loc>
+<lastmod>2019-12-25T17:55:43-05:00</lastmod>
 </url>
 </urlset>
